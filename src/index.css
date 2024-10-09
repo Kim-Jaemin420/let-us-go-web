@@ -1,0 +1,33 @@
+@layer reset, base, tokens, recipes, utilities;
+
+@layer base {
+  @font-face {
+    font-family: "SF Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local("SF Pro Display"), local("SF Pro Icons"), local("SF Pro Text"), local("SF Pro");
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: #13161c;
+    scrollbar-gutter: 'stable';
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
+
+.a11y-hidden {
+  @apply absolute m-[-1px] h-1 w-1 overflow-hidden whitespace-nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
