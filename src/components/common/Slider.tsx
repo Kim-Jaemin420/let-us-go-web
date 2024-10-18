@@ -15,16 +15,16 @@ const Slider = ({ children, className, reverse = false }: Props) => {
         <div className={styles.slide}>
           <div
             className={classNames({
-              [styles.rightToLeftChildren1]: !reverse,
-              [styles.infinite1]: reverse,
+              [styles.slideRightLoop1]: !reverse,
+              [styles.slideLeftLoop1]: reverse,
             })}
           >
             {children}
           </div>
           <div
             className={classNames({
-              [styles.rightToLeftChildren2]: !reverse,
-              [styles.infinite2]: reverse,
+              [styles.slideRightLoop2]: !reverse,
+              [styles.slideLeftLoop2]: reverse,
             })}
           >
             {children}
@@ -55,17 +55,17 @@ const styles = {
     display: "flex",
     width: "100%",
   }),
-  rightToLeftChildren1: css({
-    animation: "50s linear infinite leftToRightInfiniteSlide1",
+  slideRightLoop1: css({
+    animation: "50s linear infinite slideRightLoop1",
   }),
-  rightToLeftChildren2: css({
-    animation: "50s linear infinite leftToRightInfiniteSlide2",
+  slideRightLoop2: css({
+    animation: "50s linear infinite slideRightLoop2",
   }),
-  infinite1: css({
-    animation: "50s linear infinite infiniteAnimation1",
+  slideLeftLoop1: css({
+    animation: "50s linear infinite slideLeftLoop1",
   }),
-  infinite2: css({
-    animation: "50s linear infinite infiniteAnimation2",
+  slideLeftLoop2: css({
+    animation: "50s linear infinite slideLeftLoop2",
   }),
 };
 

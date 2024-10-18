@@ -1,10 +1,10 @@
 import { css } from "@styled-system/css";
-import Hackathon from "./components/Hackathon";
+import Network from "./components/Network";
 
 const App = () => {
   return (
     <div className={styles.container}>
-      <Hackathon />
+      <Network />
     </div>
   );
 };
