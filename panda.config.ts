@@ -22,11 +22,11 @@ export default defineConfig({
             400: { value: "#242931" },
             500: { value: "#13161C" },
           },
-          summer: { value: "#FFF849" },
+          winter: { value: "#FF8EFF" }
         },
       },
       keyframes: {
-        infiniteAnimation1: {
+        slideLeftLoop1: {
           "0%": {
             transform: "translateX(0%)",
           },
@@ -40,7 +40,7 @@ export default defineConfig({
             transform: "translateX(0%)",
           },
         },
-        infiniteAnimation2: {
+        slideLeftLoop2: {
           "0%": {
             transform: "translateX(0%)",
           },
@@ -48,7 +48,7 @@ export default defineConfig({
             transform: "translateX(-200%)",
           },
         },
-        leftToRightInfiniteSlide1: {
+        slideRightLoop1: {
           "0%": {
             transform: "translateX(0%)",
           },
@@ -62,7 +62,7 @@ export default defineConfig({
             transform: "translateX(0%)",
           },
         },
-        leftToRightInfiniteSlide2: {
+        slideRightLoop2: {
           "0%": {
             transform: "translateX(-200%)",
           },

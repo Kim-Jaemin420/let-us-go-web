@@ -2,12 +2,12 @@ import { forwardRef } from "react";
 import { Map, MapMarker } from "react-kakao-maps-sdk";
 import { css } from "@styled-system/css";
 import useKakaoMapLoader from "@/hooks/useKakaoLoader";
-import Signature1Big from "@/assets/svgs/hackathon/signature1-big.svg";
-import Signature1Small from "@/assets/svgs/hackathon/signature1-small.svg";
+import Signature1Pc from "@/assets/svgs/winter/signature1-pc.svg";
+import Signature1Mobile from "@/assets/svgs/winter/signature1-mobile.svg";
 
-const HACKATHON_LOCATION = {
-  lat: 37.54619,
-  lng: 127.06578,
+const NETWORK_LOCATION = {
+  lat: 37.50603,
+  lng: 127.02534,
 };
 
 const Location = forwardRef<HTMLDivElement>((_props, ref) => {
@@ -15,18 +15,18 @@ const Location = forwardRef<HTMLDivElement>((_props, ref) => {
 
   return (
     <div ref={ref} className={styles.container}>
-      <div className={styles.bigSignature}>
-        <Signature1Big />
+      <div className={styles.signaturePc}>
+        <Signature1Pc />
       </div>
-      <div className={styles.smallSignature}>
-        <Signature1Small />
+      <div className={styles.signatureMobile}>
+        <Signature1Mobile />
       </div>
       <div className={styles.title}>Location</div>
-      <div>엘리스랩에서 6월 29일에 만나요!</div>
+      <div>강남 모드라운지에서 11월 29일에 만나요!</div>
       <div className={styles.mapContainer}>
         <Map
           id="map"
-          center={HACKATHON_LOCATION}
+          center={NETWORK_LOCATION}
           level={4}
           style={{
             width: "100%",
@@ -37,7 +37,7 @@ const Location = forwardRef<HTMLDivElement>((_props, ref) => {
             maxHeight: "66rem",
           }}
         >
-          <MapMarker position={HACKATHON_LOCATION} />
+          <MapMarker position={NETWORK_LOCATION} />
         </Map>
       </div>
     </div>
@@ -62,14 +62,14 @@ const styles = {
       fontSize: "1.6rem",
     },
   }),
-  bigSignature: css({
+  signaturePc: css({
     display: "block",
 
     "@media (max-width: 768px)": {
       display: "none",
     },
   }),
-  smallSignature: css({
+  signatureMobile: css({
     display: "none",
 
     "@media (max-width: 768px)": {
@@ -78,7 +78,7 @@ const styles = {
   }),
   title: css({
     fontSize: "7.2rem",
-    color: "summer",
+    color: "winter",
     fontFamily: "Unbounded",
     fontWeight: 700,
     marginBottom: "4.4rem",

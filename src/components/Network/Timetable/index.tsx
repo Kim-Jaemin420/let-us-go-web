@@ -1,5 +1,5 @@
-import Signature2Big from "@/assets/svgs/hackathon/signature2-big.svg";
-import Signature2Small from "@/assets/svgs/hackathon/signature2-small.svg";
+import Signature2Pc from "@/assets/svgs/winter/signature2-pc.svg";
+import Signature2Mobile from "@/assets/svgs/winter/signature2-mobile.svg";
 import { css } from "@styled-system/css";
 import { forwardRef } from "react";
 import Time from "./Time";
@@ -9,53 +9,50 @@ const Timetable = forwardRef<HTMLDivElement>((_props, ref) => {
   return (
     <div ref={ref} className={styles.container}>
       <div className={styles.logoContainer}>
-        <div className={styles.bigSignature}>
-          <Signature2Big />
+        <div className={styles.signaturePc}>
+          <Signature2Pc />
         </div>
-        <div className={styles.smallSignature}>
-          <Signature2Small />
+        <div className={styles.signatureMobile}>
+          <Signature2Mobile />
         </div>
       </div>
       <div className={styles.title}>Timetable</div>
       <div className={styles.timetableContainer}>
         <div className={styles.timeContainer}>
-          <Time size="small">9:30-10:00</Time>
-          <Time>10:00-11:00</Time>
-          <Time>11:00-12:00</Time>
-          <Time>12:00-13:00</Time>
-          <Time>13:00-14:00</Time>
-          <Time>14:00-15:00</Time>
-          <Time>15:00-16:00</Time>
-          <Time>16:00-17:00</Time>
-          <Time>17:00-18:00</Time>
-          <Time>18:00-19:00</Time>
-          <Time>19:00-20:00</Time>
-          <Time>20:00-21:00</Time>
+          <Time>19:00-19:10</Time>
+          <Time>19:30-20:00</Time>
+          <Time>20:00-20:30</Time>
+          <Time>20:30-21:00</Time>
+          <Time>21:00-21:10</Time>
+          <Time>21:10-21:30</Time>
+          <Time>22:30-23:00</Time>
+          <Time>상시</Time>
         </div>
         <div className={styles.scheduleContainer}>
-          <Schedule className={styles.scheduleSmall}>
-            ✍️ 참가자 등록 <span className={styles.time}>(09:30 - 10:00)</span>
+          <Schedule>
+            🎤 개회사 <span className={styles.time}>(19:00 - 19:10)</span>
           </Schedule>
-          <Schedule className={styles.scheduleMedium}>
-            💭 아이디어 최종 정리 <span className={styles.time}>(10:10 - 11:00)</span>
+          <Schedule>
+            🥳 개인 앱 페스티벌 <span className={styles.time}>(19:30 - 20:00)</span>
           </Schedule>
-          <Schedule className={styles.scheduleMedium}>
-            🎤 아이디어 발표 <span className={styles.time}>(11:00 - 12:00)</span>
+          <Schedule>
+            🍚 심야식당 <span className={styles.time}>(20:00 - 20:30)</span>
           </Schedule>
-          <Schedule className={styles.scheduleMedium}>
-            🍚 점심식사 <span className={styles.time}>(12:00 - 13:00)</span>
+          <Schedule>
+            🤑 바자회 <span className={styles.time}>(20:30 - 21:00)</span>
           </Schedule>
-          <Schedule className={styles.scheduleBig}>
-            🧑‍💻
-            <br /> 개발 및 중간 이벤트
-            <br />
-            <span className={styles.time}>(13:00 - 19:30)</span>
+          <Schedule>
+            📸 단체사진 촬영
+            <span className={styles.time}>(21:00 - 21:10)</span>
           </Schedule>
-          <Schedule className={styles.lastPresentation}>
-            🎤🍚 최종발표/저녁식사 <span className={styles.time}>(19:30 - 20:30)</span>
+          <Schedule>
+            🍚 심야식당 <span className={styles.time}>(21:10 - 21:30)</span>
           </Schedule>
-          <Schedule className={styles.scheduleSmall}>
-            🏆 시상식 <span className={styles.time}>(20:30 - 21:00)</span>
+          <Schedule>
+            🧹 마무리 <span className={styles.time}>(22:30 - 23:00)</span>
+          </Schedule>
+          <Schedule>
+            🎄 소원나무, 바자회(가판)
           </Schedule>
         </div>
       </div>
@@ -78,19 +75,19 @@ const styles = {
       marginBottom: "12rem",
     },
   }),
-  bigSignature: css({
+  logoContainer: css({
+    display: "flex",
+    flexFlow: "column wrap",
+    alignItems: "center",
+  }),
+  signaturePc: css({
     display: "block",
 
     "@media (max-width: 768px)": {
       display: "none",
     },
   }),
-  logoContainer: css({
-    display: "flex",
-    flexFlow: "column wrap",
-    alignItems: "center",
-  }),
-  smallSignature: css({
+  signatureMobile: css({
     display: "none",
 
     "@media (max-width: 768px)": {
@@ -99,7 +96,7 @@ const styles = {
   }),
   title: css({
     fontSize: "7.2rem",
-    color: "summer",
+    color: "winter",
     fontFamily: "Unbounded",
     fontWeight: 700,
     marginBottom: "4.4rem",
@@ -116,6 +113,7 @@ const styles = {
     width: "100%",
   }),
   timeContainer: css({
+    color: "winter",
     marginRight: "3.6rem",
 
     "@media (max-width: 768px)": {

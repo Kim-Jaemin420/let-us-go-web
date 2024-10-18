@@ -2,7 +2,7 @@ import { css } from "@styled-system/css";
 import headerLogo from "@/assets/images/header-logo.png";
 
 interface Props {
-  onScrollToSection: (section: "timetable" | "project" | "location" | "qna" | "contact") => void;
+  onScrollToSection: (section: "timetable" | "location" | "contact") => void;
 }
 
 const Header = ({ onScrollToSection }: Props) => {
@@ -14,12 +14,10 @@ const Header = ({ onScrollToSection }: Props) => {
         </div>
         <ul className={styles.menu}>
           <li onClick={() => onScrollToSection("timetable")}>Timetable</li>
-          <li onClick={() => onScrollToSection("project")}>Project</li>
           <li onClick={() => onScrollToSection("location")}>Location</li>
-          <li onClick={() => onScrollToSection("qna")}>QnA</li>
           <li onClick={() => onScrollToSection("contact")}>Contact</li>
         </ul>
-        <button className={styles.registerButton}>🧑‍💻 해커톤 신청하기</button>
+        <a href="https://smartstore.naver.com/let-us-go/products/11017888414" target="_blank" className={styles.registerButton}>🥳 네트워킹 신청하기</a>
       </nav>
     </header>
   );
@@ -91,14 +89,16 @@ const styles = {
     display: "none",
     width: "12.4rem",
     height: "3rem",
-    backgroundColor: "summer",
+    backgroundColor: "winter",
     fontWeight: 700,
     fontSize: "1.2rem",
     color: "background.500",
     borderRadius: "5rem",
 
     "@media (max-width: 768px)": {
-      display: "block",
+      display: "flex",
+      justifyContent: 'center',
+      alignItems: 'center',
     },
   }),
 };

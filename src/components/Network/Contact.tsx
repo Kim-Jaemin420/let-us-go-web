@@ -1,6 +1,6 @@
 import { css } from "@styled-system/css";
-import Signature3Big from "@/assets/svgs/hackathon/signature3-big.svg";
-import Signature3Small from "@/assets/svgs/hackathon/signature3-small.svg";
+import Signature1Pc from "@/assets/svgs/winter/signature2-pc.svg";
+import Signature1Mobile from "@/assets/svgs/winter/signature2-mobile.svg";
 import Email56 from "@/assets/svgs/hackathon/email56.svg";
 import Email16 from "@/assets/svgs/hackathon/email16.svg";
 import Instagram56 from "@/assets/svgs/hackathon/instagram56.svg";
@@ -15,10 +15,10 @@ const Contact = forwardRef<HTMLDivElement>((_props, ref) => {
   return (
     <div ref={ref} className={styles.container}>
       <div className={styles.bigSignature}>
-        <Signature3Big />
+        <Signature1Pc />
       </div>
       <div className={styles.smallSignature}>
-        <Signature3Small />
+        <Signature1Mobile />
       </div>
       <div className={styles.title}>Contact</div>
       <div className={styles.contactContainer}>
@@ -112,7 +112,7 @@ const styles = {
   }),
   title: css({
     fontSize: "7.2rem",
-    color: "summer",
+    color: "winter",
     fontFamily: "Unbounded",
     fontWeight: 700,
     marginBottom: "4.4rem",

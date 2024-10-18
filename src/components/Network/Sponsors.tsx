@@ -1,5 +1,5 @@
-import Signature4Big from "@/assets/svgs/hackathon/signature4-big.svg";
-import Signature4Small from "@/assets/svgs/hackathon/signature4-small.svg";
+import Signature3Pc from "@/assets/svgs/winter/signature3-pc.svg";
+import Signature3Mobile from "@/assets/svgs/winter/signature3-mobile.svg";
 import { css } from "@styled-system/css";
 import eliceLabImage from "@/assets/images/sponsors/eliceLab.png";
 import appknotImage from "@/assets/images/sponsors/appknot.png";
@@ -8,10 +8,10 @@ const Sponsors = () => {
   return (
     <div className={styles.container}>
       <div className={styles.bigSignature}>
-        <Signature4Big />
+        <Signature3Pc />
       </div>
       <div className={styles.smallSignature}>
-        <Signature4Small />
+        <Signature3Mobile />
       </div>
       <div className={styles.title}>Sponsors</div>
       <div className={styles.describe}>
@@ -68,7 +68,7 @@ const styles = {
   }),
   title: css({
     fontSize: "7.2rem",
-    color: "summer",
+    color: "winter",
     fontFamily: "Unbounded",
     fontWeight: 700,
     marginBottom: "4.4rem",
@@ -90,7 +90,7 @@ const styles = {
       marginBottom: "6rem",
     },
   }),
-  imageContainer:css({
+  imageContainer: css({
     display: "flex",
     flexFlow: "column wrap",
     gap: "10rem",

@@ -1,32 +1,36 @@
 import classNames from "classnames";
-import Signature1Big from "@/assets/svgs/hackathon/signature1-big.svg";
-import Signature1Small from "@/assets/svgs/hackathon/signature1-small.svg";
-import groupPhotoImage from "@/assets/images/group-photo.jpg";
 import { css } from "@styled-system/css";
+import Signature1Pc from "@/assets/svgs/winter/signature1-pc.svg";
+import Signature1Mobile from "@/assets/svgs/winter/signature1-mobile.svg";
+import groupPhotoImage from "@/assets/images/group-photo.png";
 
 const Invitation = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.bigSignature}>
-        <Signature1Big />
+      <div className={styles.signaturePc}>
+        <Signature1Pc />
       </div>
-      <div className={styles.smallSignature}>
-        <Signature1Small />
+      <div className={styles.signatureMobile}>
+        <Signature1Mobile />
       </div>
       <div className={styles.title}>Invitation</div>
-      <div className={classNames(styles.description, styles.desktopOnly)}>
-        뜨거운 햇살이 시작되는 6월입니다.{"\n"}WWDC의 분위기와 더불어 날씨도 뜨거워지고 있는데요, 이
-        뜨거운 열정을 함께 나누는{"\n"}찍먹톤을 개최합니다. WWDC24의 기술을 슬쩍 찍어먹어보는
-        해커톤인 찍먹톤,{"\n"}새로운 도전과 함께 성장하는 기회를 가져보는 것은 어떨까요?
+      <div className={classNames(styles.description, styles.pcOnly)}>
+        길었던 여름이 지나고 차가운 겨울 공기가 느껴지는 요즘, {"\n"}
+        함께 모여 따뜻한 저녁을 보내는건 어떨까요? ❄️{"\n"}
+        이번 겨울에는 한 해의 피로를 풀고, 힐링의 시간을 가져보려 합니다. {"\n"}
+        또한, 바자회와 개인 앱을 홍보할 기회도 있으니 함께 따뜻한 대화를 나누며 {"\n"}한 해를 마무리할 완벽한 시간이 될 거에요.
+        {"\n"}
       </div>
       <div className={classNames(styles.description, styles.mobileOnly)}>
-        뜨거운 햇살이 시작되는 6월입니다.{"\n"}WWDC의 분위기와 더불어 날씨도 뜨거워지고 {"\n"}
-        있는데요, 이 뜨거운 열정을 함께 나누는 찍먹톤을 {"\n"}개최합니다. WWDC24의 기술을 슬쩍
-        찍어먹어{"\n"}보는 해커톤인 찍먹톤, 새로운 도전과 함께 성장하는 {"\n"}기회를 가져보는 것은
-        어떨까요?
+        길었던 여름이 지나고 차가운 겨울 공기가 느껴지는 요즘, {"\n"}
+        함께 모여 따뜻한 저녁을 보내는건 어떨까요? ❄️{"\n"}
+        이번 겨울에는 한 해의 피로를 풀고, {"\n"}
+        힐링의 시간을 가져보려 합니다. {"\n"}
+        또한, 바자회와 개인 앱을 홍보할 기회도 있으니 {"\n"}함께 따뜻한 대화를 나누며 {"\n"}한 해를 마무리할 완벽한 시간이 될 거에요.
+        {"\n"}
       </div>
       <div className={styles.eventIntro}>
-        6월 29일 토요일, {"\n"}함께 모여 뜨거운 여름을 불태워보자구요 🙌
+        11월 29일 금요일, {"\n"}잊지 못할 저녁 함께 하실래요?
       </div>
       <div className={styles.imageContainer}>
         <img src={groupPhotoImage} alt="단체사진" />
@@ -50,14 +54,14 @@ const styles = {
       marginBottom: "12rem",
     },
   }),
-  bigSignature: css({
+  signaturePc: css({
     display: "block",
 
     "@media (max-width: 768px)": {
       display: "none",
     },
   }),
-  smallSignature: css({
+  signatureMobile: css({
     display: "none",
 
     "@media (max-width: 768px)": {
@@ -66,7 +70,7 @@ const styles = {
   }),
   title: css({
     fontSize: "7.2rem",
-    color: "summer",
+    color: "winter",
     fontFamily: "Unbounded",
     fontWeight: 700,
 
@@ -86,7 +90,7 @@ const styles = {
       marginTop: "3.6rem",
     },
   }),
-  desktopOnly: css({
+  pcOnly: css({
     display: "block",
 
     "@media (max-width: 768px)": {

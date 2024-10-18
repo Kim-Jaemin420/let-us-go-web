@@ -1,21 +1,20 @@
 import { css } from "@styled-system/css";
 import Slider from "../common/Slider";
 
-const LastEvent = () => {
-  const message =
-    " 🧑‍💻 지난 행사 보기 → 🧑‍💻 지난 행사 보기 → 🧑‍💻 지난 행사 보기 → 🧑‍💻 지난 행사 보기 → ";
-  const repeatedMessage = Array(3).fill(message).join("");
+const Banner = () => {
+  const message = " 🧑‍💻 Welcome 👋 let us: Go! ";
+  const repeatedMessage = Array(5).fill(message).join("");
 
   return (
     <Slider className={styles.slider}>
-      <a href="https://letusgo2024-spring.vercel.app/">
+      <div>
         <div className={styles.message}>{repeatedMessage}</div>
-      </a>
+      </div>
     </Slider>
   );
 };
 
-export default LastEvent;
+export default Banner;
 
 const styles = {
   slider: css({
@@ -23,9 +22,9 @@ const styles = {
     alignItems: "center",
     height: "11.3rem",
     overflow: "hidden",
-    color: "#000",
-    backgroundColor: "summer",
+    color: "winter",
     fontFamily: "Unbounded",
+    marginBottom: "28rem",
 
     borderY: "0.1rem solid",
     whiteSpace: "pre",
@@ -37,6 +36,7 @@ const styles = {
     "@media (max-width: 768px)": {
       height: "3.5rem",
       fontSize: "1.6rem",
+      marginBottom: "7.8rem",
     },
   }),
   message: css({

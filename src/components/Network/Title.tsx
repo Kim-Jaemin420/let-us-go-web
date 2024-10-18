@@ -28,26 +28,26 @@ const Title = () => {
             let us:
           </text>
         </svg>
-        <span className={styles.hack}>
+        <span className={styles.network}>
           <TypeAnimation
-            sequence={["Hack"]}
+            sequence={["Network"]}
             wrapper="span"
             speed={1}
             style={{
               display: "inline-block",
               fontFamily: "Unbounded",
               fontWeight: "700",
-              color: "#FFF849",
+              color: "#FF8EFF",
               verticalAlign: "middle",
             }}
             repeat={1}
           />
         </span>
       </div>
-      <div className={styles.description}>a.k.a 2024 찍먹톤에 초대합니다.</div>
-      <div className={styles.date}>2024.6.29(SAT) 10:00 - 21:00</div>
-      <a href="https://forms.gle/XYgxktLg4RuHBntX6" target="_blank" className={styles.applyButton}>
-        🧑‍💻해커톤 신청하기
+      <div className={styles.description}>iOS 개발자들의 2024 연말 네트워킹에 초대합니다.</div>
+      <div className={styles.date}>2024.11.29(FRI) 19:00 - 22:30</div>
+      <a href="https://smartstore.naver.com/let-us-go/products/11017888414" target="_blank" className={styles.applyButton}>
+        🥳 네트워킹 신청하기
       </a>
     </div>
   );
@@ -127,13 +127,8 @@ const styles = {
     strokeWidth: "0.5rem",
     paintOrder: "stroke",
   }),
-  hack: css({
+  network: css({
     fontSize: "12rem",
-
-    // "@media (max-width: 1214px)": {
-    //   display: "flex",
-    //   flexFlow: "column wrap",
-    // },
 
     "@media (max-width: 768px)": {
       fontSize: "3.6rem",
@@ -169,7 +164,7 @@ const styles = {
     fontSize: "3.2rem",
     padding: "2.7rem 6rem",
     borderRadius: "5rem",
-    backgroundColor: "summer",
+    backgroundColor: 'winter',
     color: "background.500",
 
     "@media (max-width: 768px)": {
