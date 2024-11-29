@@ -14,19 +14,45 @@ export default defineConfig({
   theme: {
     extend: {
       tokens: {
+        fonts: {
+          intel: { value: ["intelone-mono-font-family-regular", "sans-serif"] },
+        },
         colors: {
-          background: {
-            100: { value: "#ffffff" },
-            200: { value: "#ABB5C3" },
-            300: { value: "#2F343C" },
-            400: { value: "#242931" },
-            500: { value: "#13161C" },
+          primary: {
+            100: { value: "#BCC6FF" },
+            200: { value: "#2F50FF" },
+            300: { value: "#1937E1" },
+            400: { value: "#0B27BF" },
           },
-          summer: { value: "#FFF849" },
+          secondary: { value: "#ADFE00" },
+          neutral: {
+            100: { value: "#F7FAFC" },
+            200: { value: "#EDF1F6" },
+            300: { value: "#CCD5E0" },
+            400: { value: "#A1ADC0" },
+            500: { value: "#727F96" },
+            600: { value: "#1B202C" },
+            700: { value: "#212A39" },
+          },
+          white: { value: "#fff" },
+          orange: { value: "#FD7A01" },
+          pink: { value: "#F492FC" },
+          purple: { value: "#8F00FF" },
+          blue: { value: "#00C2FF" },
+          yellow: { value: "#FFE500" },
         },
       },
       keyframes: {
-        infiniteAnimation1: {
+        float: {
+          "0%": {
+            transform: "translateY(0)",
+          },
+          "100%": { transform: "translateY(0)" },
+          "50%": {
+            transform: "translateY(-20px)",
+          },
+        },
+        leftToRightInfiniteSlide1: {
           "0%": {
             transform: "translateX(0%)",
           },
@@ -40,7 +66,7 @@ export default defineConfig({
             transform: "translateX(0%)",
           },
         },
-        infiniteAnimation2: {
+        leftToRightInfiniteSlide2: {
           "0%": {
             transform: "translateX(0%)",
           },
@@ -48,7 +74,7 @@ export default defineConfig({
             transform: "translateX(-200%)",
           },
         },
-        leftToRightInfiniteSlide1: {
+        rightToLeftInfiniteSlide1: {
           "0%": {
             transform: "translateX(0%)",
           },
@@ -62,7 +88,7 @@ export default defineConfig({
             transform: "translateX(0%)",
           },
         },
-        leftToRightInfiniteSlide2: {
+        rightToLeftInfiniteSlide2: {
           "0%": {
             transform: "translateX(-200%)",
           },

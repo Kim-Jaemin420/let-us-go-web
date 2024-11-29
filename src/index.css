@@ -2,23 +2,38 @@
 
 @layer base {
   @font-face {
-    font-family: "SF Pro";
-    font-style: normal;
+    font-family: "intelone-mono-font-family-regular";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/intelone-mono-font-family-regular.woff2")
+      format("woff2");
     font-weight: 400;
-    font-display: swap;
-    src: local("SF Pro Display"), local("SF Pro Icons"), local("SF Pro Text"), local("SF Pro");
+    font-style: normal;
   }
 
   html {
     font-size: 62.5%;
+    scrollbar-gutter: stable;
   }
 
   body {
-    font-family: "SF Pro Display", sans-serif;
-    font-size: 1.6rem;
-    color: #fff;
-    background-color: #13161c;
-    scrollbar-gutter: 'stable';
+    font-family:
+      "Pretendard Variable",
+      Pretendard,
+      -apple-system,
+      BlinkMacSystemFont,
+      system-ui,
+      Roboto,
+      "Helvetica Neue",
+      "Segoe UI",
+      "Apple SD Gothic Neo",
+      "Noto Sans KR",
+      "Malgun Gothic",
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      "Segoe UI Symbol",
+      sans-serif;
+    font-size: 16px;
+    color: var(--colors-neutral-600);
+    overflow-x: hidden;
   }
 
   button {
