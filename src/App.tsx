@@ -1,12 +1,7 @@
 import { css } from "@styled-system/css";
-import Hackathon from "./components/Hackathon";
 
 const App = () => {
-  return (
-    <div className={styles.container}>
-      <Hackathon />
-    </div>
-  );
+  return <div className={styles.container}></div>;
 };
 
 export default App;
