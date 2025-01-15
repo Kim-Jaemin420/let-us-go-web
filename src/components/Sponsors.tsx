@@ -1,5 +1,5 @@
-import Signature4Big from "@/assets/svgs/hackathon/signature4-big.svg";
-import Signature4Small from "@/assets/svgs/hackathon/signature4-small.svg";
+import Signature4Big from "@/assets/svgs/signature4-big.svg?react";
+import Signature4Small from "@/assets/svgs/signature4-small.svg?react";
 import { css } from "@styled-system/css";
 import eliceLabImage from "@/assets/images/sponsors/eliceLab.png";
 import appknotImage from "@/assets/images/sponsors/appknot.png";
@@ -90,7 +90,7 @@ const styles = {
       marginBottom: "6rem",
     },
   }),
-  imageContainer:css({
+  imageContainer: css({
     display: "flex",
     flexFlow: "column wrap",
     gap: "10rem",

@@ -1,8 +1,8 @@
 import { TypeAnimation } from "react-type-animation";
 import classNames from "classnames";
 import { css } from "@styled-system/css";
-import Logo1 from "@/assets/svgs/logo1.svg";
-import Logo1Small from "@/assets/svgs/logo1-small.svg";
+import Logo1 from "@/assets/svgs/logo1.svg?react";
+import Logo1Small from "@/assets/svgs/logo1-small.svg?react";
 
 const Title = () => {
   return (
@@ -30,9 +30,9 @@ const Title = () => {
         </svg>
         <span className={styles.hack}>
           <TypeAnimation
-            sequence={["Hack"]}
+            sequence={["Hack", 1000, "", 1000]}
             wrapper="span"
-            speed={1}
+            speed={30}
             style={{
               display: "inline-block",
               fontFamily: "Unbounded",
@@ -40,7 +40,7 @@ const Title = () => {
               color: "#FFF849",
               verticalAlign: "middle",
             }}
-            repeat={1}
+            repeat={Infinity}
           />
         </span>
       </div>

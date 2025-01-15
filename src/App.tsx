@@ -1,17 +1,17 @@
 import { css } from "@styled-system/css";
 import { useRef } from "react";
-import Header from "./components/Hackathon/Header";
-import Title from "./components/Hackathon/Title";
-import Banner from "./components/Hackathon/Banner";
-import Invitation from "./components/Hackathon/Invitation";
-import Timetable from "./components/Hackathon/Timetable";
-import Project from "./components/Hackathon/Project";
-import Sponsors from "./components/Hackathon/Sponsors";
-import Location from "./components/Hackathon/Location";
-import QnA from "./components/Hackathon/QnA";
-import Contact from "./components/Hackathon/Contact";
-import LastEvent from "./components/Hackathon/LastEvent";
-import Footer from "./components/Hackathon/Footer";
+import Header from "./components/Header";
+import Title from "./components/Title";
+import Banner from "./components/Banner";
+import Invitation from "./components/Invitation";
+import Timetable from "./components/Timetable";
+import Project from "./components/Project";
+import Sponsors from "./components/Sponsors";
+import Location from "./components/Location";
+import QnA from "./components/QnA";
+import Contact from "./components/Contact";
+import LastEvent from "./components/LastEvent";
+import Footer from "./components/Footer";
 
 const App = () => {
   const timetableRef = useRef<HTMLDivElement>(null);
@@ -30,7 +30,11 @@ const App = () => {
     }[section];
 
     if (sectionRef?.current) {
-      sectionRef.current.scrollIntoView({ behavior: "smooth" });
+      const yOffset = -80;
+      const element = sectionRef.current;
+      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
 

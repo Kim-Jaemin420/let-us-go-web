@@ -1,15 +1,11 @@
-import { css } from "@styled-system/css";
-import Signature3Big from "@/assets/svgs/hackathon/signature3-big.svg";
-import Signature3Small from "@/assets/svgs/hackathon/signature3-small.svg";
-import Email56 from "@/assets/svgs/hackathon/email56.svg";
-import Email16 from "@/assets/svgs/hackathon/email16.svg";
-import Instagram56 from "@/assets/svgs/hackathon/instagram56.svg";
-import Instagram16 from "@/assets/svgs/hackathon/instagram16.svg";
-import Kakaotalk56 from "@/assets/svgs/hackathon/kakaotalk56.svg";
-import Kakaotalk16 from "@/assets/svgs/hackathon/kakaotalk16.svg";
-import ArrowRight32 from "@/assets/svgs/hackathon/arrow-right32.svg";
-import ArrowRight16 from "@/assets/svgs/hackathon/arrow-right16.svg";
 import { forwardRef } from "react";
+import { css } from "@styled-system/css";
+import Signature3Big from "@/assets/svgs/signature3-big.svg?react";
+import Signature3Small from "@/assets/svgs/signature3-small.svg?react";
+import EmailSvg from "@/assets/svgs/email.svg?react";
+import InstagramSvg from "@/assets/svgs/instagram.svg?react";
+import KakaotalkSvg from "@/assets/svgs/kakaotalk.svg?react";
+import ArrowRightSvg from "@/assets/svgs/arrow-right.svg?react";
 
 const Contact = forwardRef<HTMLDivElement>((_props, ref) => {
   return (
@@ -24,57 +20,27 @@ const Contact = forwardRef<HTMLDivElement>((_props, ref) => {
       <div className={styles.contactContainer}>
         <a href="mailTo:iOSDevKor@gmail.com" className={styles.contactMethod}>
           <div className={styles.contactItem}>
-            <div className={styles.bigIcon}>
-              <Email56 />
-            </div>
-            <div className={styles.smallIcon}>
-              <Email16 />
-            </div>
+            <EmailSvg className={styles.icon} />
             <div>Email</div>
           </div>
-          <div className={styles.bigIcon}>
-            <ArrowRight32 />
-          </div>
-          <div className={styles.smallIcon}>
-            <ArrowRight16 />
-          </div>
+          <ArrowRightSvg className={styles.arrowRightIcon} />
         </a>
         <a
           href="https://www.instagram.com/letusgo_kor?igsh=eDBnazE5cXEzcnN0"
           className={styles.contactMethod}
         >
           <div className={styles.contactItem}>
-            <div className={styles.bigIcon}>
-              <Instagram56 />
-            </div>
-            <div className={styles.smallIcon}>
-              <Instagram16 />
-            </div>
+            <InstagramSvg className={styles.icon} />
             <div>Instagram</div>
           </div>
-          <div className={styles.bigIcon}>
-            <ArrowRight32 />
-          </div>
-          <div className={styles.smallIcon}>
-            <ArrowRight16 />
-          </div>
+          <ArrowRightSvg className={styles.arrowRightIcon} />
         </a>
         <a href="https://open.kakao.com/o/gyLape" className={styles.contactMethod}>
           <div className={styles.contactItem}>
-            <div className={styles.bigIcon}>
-              <Kakaotalk56 />
-            </div>
-            <div className={styles.smallIcon}>
-              <Kakaotalk16 />
-            </div>
+            <KakaotalkSvg className={styles.icon} />
             <div>Kakaotalk</div>
           </div>
-          <div className={styles.bigIcon}>
-            <ArrowRight32 />
-          </div>
-          <div className={styles.smallIcon}>
-            <ArrowRight16 />
-          </div>
+          <ArrowRightSvg className={styles.arrowRightIcon} />
         </a>
       </div>
     </div>
@@ -171,16 +137,24 @@ const styles = {
       gap: "0.8rem",
     },
   }),
-  bigIcon: css({
-    display: "block",
+  arrowRightIcon: css({
+    width: "3.2rem",
+    height: "3.2rem",
+
     "@media (max-width: 768px)": {
-      display: "none",
+      width: "1.6rem",
+      height: "1.6rem",
     },
   }),
-  smallIcon: css({
-    display: "none",
+  icon: css({
+    width: "5.6rem",
+    height: "5.6rem",
+    marginRight: "3.2rem",
+
     "@media (max-width: 768px)": {
-      display: "block",
+      width: "2rem",
+      height: "2rem",
+      marginRight: "1.2rem",
     },
   }),
 };

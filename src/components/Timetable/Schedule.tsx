@@ -23,9 +23,12 @@ const styles = {
     backgroundColor: "background.300",
     borderRadius: "1.2rem",
     width: "100%",
+    height: "7.3rem",
+    minHeight: "7.3rem",
     marginBottom: "2rem",
 
     "@media (max-width: 768px)": {
+      height: "3rem",
       fontSize: "1.2rem",
       borderRadius: "0.8rem",
       marginBottom: "0.8rem",

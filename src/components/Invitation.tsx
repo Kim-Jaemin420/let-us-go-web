@@ -1,6 +1,6 @@
 import classNames from "classnames";
-import Signature1Big from "@/assets/svgs/hackathon/signature1-big.svg";
-import Signature1Small from "@/assets/svgs/hackathon/signature1-small.svg";
+import Signature1Big from "@/assets/svgs/signature1-big.svg?react";
+import Signature1Small from "@/assets/svgs/signature1-small.svg?react";
 import groupPhotoImage from "@/assets/images/group-photo.jpg";
 import { css } from "@styled-system/css";
 

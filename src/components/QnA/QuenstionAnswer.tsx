@@ -1,9 +1,7 @@
 import { ReactNode, useEffect, useRef, useState } from "react";
 import { css } from "@styled-system/css";
-import ArrowDown32 from "@/assets/svgs/hackathon/arrow-down32.svg";
-import ArrowDown16 from "@/assets/svgs/hackathon/arrow-down16.svg";
-import ArrowUp32 from "@/assets/svgs/hackathon/arrow-up32.svg";
-import ArrowUp16 from "@/assets/svgs/hackathon/arrow-up16.svg";
+import ArrowDownSvg from "@/assets/svgs/arrow-down.svg?react";
+import ArrowUpSvg from "@/assets/svgs/arrow-up.svg?react";
 
 interface Props {
   question: ReactNode;
@@ -35,8 +33,11 @@ const QuestionAnswer = ({ question, answer }: Props) => {
           <span className={styles.questionQ(isAnswerOpen)}>Q</span>
           <span>{question}</span>
         </div>
-        <div className={styles.bigIcon}>{isAnswerOpen ? <ArrowUp32 /> : <ArrowDown32 />}</div>
-        <div className={styles.smallIcon}>{isAnswerOpen ? <ArrowUp16 /> : <ArrowDown16 />}</div>
+        {isAnswerOpen ? (
+          <ArrowUpSvg className={styles.icon} />
+        ) : (
+          <ArrowDownSvg className={styles.icon} />
+        )}
       </div>
       <div ref={answerRef} className={styles.answerWrapper}>
         <div className={styles.answer}>{answer}</div>
@@ -100,16 +101,13 @@ const styles = {
       padding: "1.2rem 1.6rem",
     },
   }),
-  bigIcon: css({
-    display: "block",
+  icon: css({
+    width: "3.2rem",
+    height: "3.2rem",
+
     "@media (max-width: 768px)": {
-      display: "none",
-    },
-  }),
-  smallIcon: css({
-    display: "none",
-    "@media (max-width: 768px)": {
-      display: "block",
+      width: "1.6rem",
+      height: "1.6rem",
     },
   }),
 };

@@ -2,8 +2,8 @@ import { forwardRef } from "react";
 import { Map, MapMarker } from "react-kakao-maps-sdk";
 import { css } from "@styled-system/css";
 import useKakaoMapLoader from "@/hooks/useKakaoLoader";
-import Signature1Big from "@/assets/svgs/hackathon/signature1-big.svg";
-import Signature1Small from "@/assets/svgs/hackathon/signature1-small.svg";
+import Signature1Big from "@/assets/svgs/signature1-big.svg?react";
+import Signature1Small from "@/assets/svgs/signature1-small.svg?react";
 
 const HACKATHON_LOCATION = {
   lat: 37.54619,

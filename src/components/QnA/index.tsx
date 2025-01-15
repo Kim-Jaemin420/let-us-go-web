@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import { css } from "@styled-system/css";
-import Signature2Big from "@/assets/svgs/hackathon/signature2-big.svg";
-import Signature2Small from "@/assets/svgs/hackathon/signature2-small.svg";
+import Signature2Big from "@/assets/svgs/signature2-big.svg?react";
+import Signature2Small from "@/assets/svgs/signature2-small.svg?react";
 import QuestionAnswer from "./QuenstionAnswer";
 
 const QnA = forwardRef<HTMLDivElement>((_props, ref) => {
