@@ -16,7 +16,7 @@ const Slider = ({ children, className, reverse = false }: Props) => {
           <div
             className={classNames({
               [styles.rightToLeftChildren1]: !reverse,
-              [styles.infinite1]: reverse,
+              [styles.leftToRightChildren1]: reverse,
             })}
           >
             {children}
@@ -24,7 +24,7 @@ const Slider = ({ children, className, reverse = false }: Props) => {
           <div
             className={classNames({
               [styles.rightToLeftChildren2]: !reverse,
-              [styles.infinite2]: reverse,
+              [styles.leftToRightChildren2]: reverse,
             })}
           >
             {children}
@@ -56,16 +56,16 @@ const styles = {
     width: "100%",
   }),
   rightToLeftChildren1: css({
-    animation: "50s linear infinite leftToRightInfiniteSlide1",
+    animation: "50s linear infinite rightToLeftInfiniteSlide1",
   }),
   rightToLeftChildren2: css({
+    animation: "50s linear infinite rightToLeftInfiniteSlide2",
+  }),
+  leftToRightChildren1: css({
+    animation: "50s linear infinite leftToRightInfiniteSlide1",
+  }),
+  leftToRightChildren2: css({
     animation: "50s linear infinite leftToRightInfiniteSlide2",
-  }),
-  infinite1: css({
-    animation: "50s linear infinite infiniteAnimation1",
-  }),
-  infinite2: css({
-    animation: "50s linear infinite infiniteAnimation2",
   }),
 };
 

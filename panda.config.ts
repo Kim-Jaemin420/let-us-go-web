@@ -26,7 +26,7 @@ export default defineConfig({
         },
       },
       keyframes: {
-        infiniteAnimation1: {
+        leftToRightInfiniteSlide1: {
           "0%": {
             transform: "translateX(0%)",
           },
@@ -40,7 +40,7 @@ export default defineConfig({
             transform: "translateX(0%)",
           },
         },
-        infiniteAnimation2: {
+        leftToRightInfiniteSlide2: {
           "0%": {
             transform: "translateX(0%)",
           },
@@ -48,7 +48,7 @@ export default defineConfig({
             transform: "translateX(-200%)",
           },
         },
-        leftToRightInfiniteSlide1: {
+        rightToLeftInfiniteSlide1: {
           "0%": {
             transform: "translateX(0%)",
           },
@@ -62,7 +62,7 @@ export default defineConfig({
             transform: "translateX(0%)",
           },
         },
-        leftToRightInfiniteSlide2: {
+        rightToLeftInfiniteSlide2: {
           "0%": {
             transform: "translateX(-200%)",
           },

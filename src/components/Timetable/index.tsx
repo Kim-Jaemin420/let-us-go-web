@@ -19,36 +19,29 @@ const Timetable = forwardRef<HTMLDivElement>((_props, ref) => {
       <div className={styles.title}>Timetable</div>
       <div className={styles.timetableContainer}>
         <div className={styles.timeContainer}>
-          <Time size="small">9:30-10:00</Time>
+          <Time>9:30-10:00</Time>
           <Time>10:00-11:00</Time>
           <Time>11:00-12:00</Time>
           <Time>12:00-13:00</Time>
           <Time>13:00-14:00</Time>
-          <Time>14:00-15:00</Time>
-          <Time>15:00-16:00</Time>
-          <Time>16:00-17:00</Time>
-          <Time>17:00-18:00</Time>
-          <Time>18:00-19:00</Time>
-          <Time>19:00-20:00</Time>
-          <Time>20:00-21:00</Time>
+          <Time>19:30-20:30</Time>
+          <Time>20:30-21:00</Time>
         </div>
         <div className={styles.scheduleContainer}>
           <Schedule className={styles.scheduleSmall}>
             ✍️ 참가자 등록 <span className={styles.time}>(09:30 - 10:00)</span>
           </Schedule>
-          <Schedule className={styles.scheduleMedium}>
+          <Schedule>
             💭 아이디어 최종 정리 <span className={styles.time}>(10:10 - 11:00)</span>
           </Schedule>
-          <Schedule className={styles.scheduleMedium}>
+          <Schedule>
             🎤 아이디어 발표 <span className={styles.time}>(11:00 - 12:00)</span>
           </Schedule>
-          <Schedule className={styles.scheduleMedium}>
+          <Schedule>
             🍚 점심식사 <span className={styles.time}>(12:00 - 13:00)</span>
           </Schedule>
-          <Schedule className={styles.scheduleBig}>
-            🧑‍💻
-            <br /> 개발 및 중간 이벤트
-            <br />
+          <Schedule>
+            🧑‍💻 개발 및 중간 이벤트
             <span className={styles.time}>(13:00 - 19:30)</span>
           </Schedule>
           <Schedule className={styles.lastPresentation}>
@@ -139,23 +132,6 @@ const styles = {
 
     "@media (max-width: 768px)": {
       height: "3rem",
-    },
-  }),
-  scheduleMedium: css({
-    height: "9.1rem",
-
-    "@media (max-width: 768px)": {
-      height: "4.6rem",
-    },
-  }),
-  scheduleBig: css({
-    height: "65.8rem",
-    display: "flex",
-    flexDirection: "column",
-    textAlign: "center",
-
-    "@media (max-width: 768px)": {
-      height: "35rem",
     },
   }),
   lastPresentation: css({

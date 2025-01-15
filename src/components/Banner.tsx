@@ -1,5 +1,5 @@
 import { css } from "@styled-system/css";
-import Slider from "../common/Slider";
+import Slider from "./common/Slider";
 
 const Banner = () => {
   const message = " 🧑‍💻 Welcome 👋 let us: Go! ";
