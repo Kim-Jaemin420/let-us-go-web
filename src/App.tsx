@@ -4,33 +4,38 @@ import Header from "./components/Header";
 import Title from "./components/Title";
 import Banner from "./components/Banner";
 import Invitation from "./components/Invitation";
+import SpeakersSupporters from "./components/SpeakersSupporters";
 import Timetable from "./components/Timetable";
-import Project from "./components/Project";
 import Sponsors from "./components/Sponsors";
 import Location from "./components/Location";
-import QnA from "./components/QnA";
 import Contact from "./components/Contact";
 import LastEvent from "./components/LastEvent";
 import Footer from "./components/Footer";
 
 const App = () => {
   const timetableRef = useRef<HTMLDivElement>(null);
-  const projectRef = useRef<HTMLDivElement>(null);
+  const speakersRef = useRef<HTMLDivElement>(null);
   const locationRef = useRef<HTMLDivElement>(null);
-  const qnaRef = useRef<HTMLDivElement>(null);
+  const sponsorsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
-  const scrollToSection = (section: "timetable" | "project" | "location" | "qna" | "contact") => {
+  const scrollToSection = (
+    section: "timetable" | "speakers" | "location" | "sponsors" | "contact",
+  ) => {
     const sectionRef = {
       timetable: timetableRef,
-      project: projectRef,
+      speakers: speakersRef,
       location: locationRef,
-      qna: qnaRef,
+      sponsors: sponsorsRef,
       contact: contactRef,
     }[section];
 
     if (sectionRef?.current) {
-      sectionRef.current.scrollIntoView({ behavior: "smooth" });
+      const yOffset = -80;
+      const element = sectionRef.current;
+      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
 
@@ -42,11 +47,10 @@ const App = () => {
         <Banner />
         <div className={styles.contentContainer}>
           <Invitation />
+          <SpeakersSupporters ref={speakersRef} />
           <Timetable ref={timetableRef} />
-          <Project ref={projectRef} />
-          <Sponsors />
+          <Sponsors ref={sponsorsRef} />
           <Location ref={locationRef} />
-          <QnA ref={qnaRef} />
           <Contact ref={contactRef} />
         </div>
         <LastEvent />
@@ -60,7 +64,6 @@ export default App;
 
 const styles = {
   container: css({
-    backgroundColor: "background.500",
     height: "100vh",
   }),
   centered: css({

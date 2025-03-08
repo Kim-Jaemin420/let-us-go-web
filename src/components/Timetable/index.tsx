@@ -1,55 +1,52 @@
-import Signature2Big from "@/assets/svgs/hackathon/signature2-big.svg";
-import Signature2Small from "@/assets/svgs/hackathon/signature2-small.svg";
+import Signature3Big from "@/assets/svgs/signature3-big.svg?react";
+import Signature3Small from "@/assets/svgs/signature3-small.svg?react";
 import { css } from "@styled-system/css";
 import { forwardRef } from "react";
-import Time from "./Time";
-import Schedule from "./Schedule";
 
 const Timetable = forwardRef<HTMLDivElement>((_props, ref) => {
   return (
     <div ref={ref} className={styles.container}>
       <div className={styles.logoContainer}>
         <div className={styles.bigSignature}>
-          <Signature2Big />
+          <Signature3Big />
         </div>
         <div className={styles.smallSignature}>
-          <Signature2Small />
+          <Signature3Small />
         </div>
       </div>
       <div className={styles.title}>Timetable</div>
       <div className={styles.timetableContainer}>
-        <div className={styles.timeContainer}>
-          <Time>9:30-10:00</Time>
-          <Time>10:00-11:00</Time>
-          <Time>11:00-12:00</Time>
-          <Time>12:00-13:00</Time>
-          <Time>13:00-14:00</Time>
-          <Time>19:30-20:30</Time>
-          <Time>20:30-21:00</Time>
+        <div className={styles.scheduleItem}>
+          <div className={styles.time}>13:00 - 13:20</div>
+          <div>
+            <div className={styles.sessionTitle}>개회사</div>
+            <div className={styles.hostInfo}>let us: Go!</div>
+          </div>
         </div>
-        <div className={styles.scheduleContainer}>
-          <Schedule className={styles.scheduleSmall}>
-            ✍️ 참가자 등록 <span className={styles.time}>(09:30 - 10:00)</span>
-          </Schedule>
-          <Schedule>
-            💭 아이디어 최종 정리 <span className={styles.time}>(10:10 - 11:00)</span>
-          </Schedule>
-          <Schedule>
-            🎤 아이디어 발표 <span className={styles.time}>(11:00 - 12:00)</span>
-          </Schedule>
-          <Schedule>
-            🍚 점심식사 <span className={styles.time}>(12:00 - 13:00)</span>
-          </Schedule>
-          <Schedule>
-            🧑‍💻 개발 및 중간 이벤트
-            <span className={styles.time}>(13:00 - 19:30)</span>
-          </Schedule>
-          <Schedule className={styles.lastPresentation}>
-            🎤🍚 최종발표/저녁식사 <span className={styles.time}>(19:30 - 20:30)</span>
-          </Schedule>
-          <Schedule className={styles.scheduleSmall}>
-            🏆 시상식 <span className={styles.time}>(20:30 - 21:00)</span>
-          </Schedule>
+        <div className={styles.scheduleItem}>
+          <div className={styles.time}>13:20 - 13:40</div>
+          <div>
+            <div className={styles.sessionTitle}>코딩테스트</div>
+            <div className={styles.hostInfo}>수박/야곰아카데미</div>
+            <div className={styles.sessionDescription}>
+              새로운 관점과 기획으로 브랜드 성장을 이끄는 사람들의 이야기 새로운 관점과 기획으로
+              브랜드 성장을 이끄는 사람들의 이야기새로운 관점과 기획으로 브랜드 성장을 이끄는
+              사람들의 이야기새로운 관점과 기획으로 브랜드 성장을 이끄는 사람들의 이야기새로운
+              관점과 기획으로 브랜드 성장을 이끄는 사람들의 이야기
+            </div>
+          </div>
+        </div>
+        <div className={styles.scheduleItem}>
+          <div className={styles.time}>13:40 - 14:50</div>
+          <div>
+            <div className={styles.sessionTitle}>Networking & Photo</div>
+          </div>
+        </div>
+        <div className={styles.scheduleItem}>
+          <div className={styles.time}>15:00 - 15:50</div>
+          <div>
+            <div className={styles.sessionTitle}>Break Time</div>
+          </div>
         </div>
       </div>
     </div>
@@ -92,64 +89,87 @@ const styles = {
   }),
   title: css({
     fontSize: "7.2rem",
-    color: "summer",
+    background: "linear-gradient(to bottom, #7F42FF 0%, #4C00EE 100%)",
+    backgroundClip: "text",
+    color: "transparent",
     fontFamily: "Unbounded",
     fontWeight: 700,
     marginBottom: "4.4rem",
 
     "@media (max-width: 768px)": {
       fontSize: "3.2rem",
-      marginBottom: "3.6rem",
+      marginBottom: "2.2rem",
     },
   }),
   timetableContainer: css({
     display: "flex",
-    alignItems: "flex-start",
+    flexDirection: "column",
     maxWidth: "121.6rem",
     width: "100%",
-  }),
-  timeContainer: css({
-    marginRight: "3.6rem",
+    paddingY: "2.8rem",
+    paddingX: "5.8rem",
+    backgroundColor: "background.300",
+    borderRadius: "2rem",
 
     "@media (max-width: 768px)": {
-      marginRight: "1.2rem",
+      paddingY: "1.4rem",
+      paddingX: "2rem",
     },
   }),
-  scheduleContainer: css({
-    flexGrow: 1,
+  scheduleItem: css({
+    display: "flex",
+    flexDirection: "row",
+    marginTop: "4.8rem",
+    paddingBottom: "5.7rem",
+    gap: "7.4rem",
+    width: "100%",
+    fontSize: "2.8rem",
+    borderBottom: "0.2rem solid",
+
+    _last: {
+      marginBottom: "4.8rem",
+      border: "none",
+    },
+
+    "@media (max-width: 768px)": {
+      fontSize: "1.4rem",
+      paddingBottom: "2rem",
+      gap: "3.7rem",
+      marginTop: "2.4rem",
+      borderBottom: "0.1rem solid",
+
+      _last: {
+        marginBottom: "2rem",
+      },
+    },
   }),
   time: css({
-    fontSize: "2.8rem",
-    fontWeight: 500,
-    marginLeft: "0.5rem",
+    minWidth: "16.8rem",
+    fontWeight: "semibold",
+    whiteSpace: "nowrap",
 
     "@media (max-width: 768px)": {
-      fontSize: "1rem",
+      minWidth: "fit-content",
     },
   }),
-  scheduleSmall: css({
-    height: "5.9rem",
+  sessionTitle: css({
+    fontSize: "3.2rem",
+    fontWeight: "bold",
 
     "@media (max-width: 768px)": {
-      height: "3rem",
+      fontSize: "1.6rem",
     },
   }),
-  lastPresentation: css({
-    height: "9.1rem",
-
-    "@media (max-width: 1214px)": {
-      fontSize: "2.5rem",
-    },
-
-    "@media (max-width: 768px)": {
-      height: "2.6rem",
-    },
+  hostInfo: css({
+    color: "#CCD5E0",
+    marginTop: "0.8rem",
   }),
-  awards: css({
-    height: "5.9rem",
+  sessionDescription: css({
+    fontSize: "2.4rem",
+    marginTop: "3.2rem",
 
     "@media (max-width: 768px)": {
-      height: "2.6rem",
+      fontSize: "1.2rem",
     },
   }),
 };

@@ -2,7 +2,9 @@ import { css } from "@styled-system/css";
 import headerLogo from "@/assets/images/header-logo.png";
 
 interface Props {
-  onScrollToSection: (section: "timetable" | "project" | "location" | "qna" | "contact") => void;
+  onScrollToSection: (
+    section: "timetable" | "speakers" | "location" | "sponsors" | "contact",
+  ) => void;
 }
 
 const Header = ({ onScrollToSection }: Props) => {
@@ -13,13 +15,13 @@ const Header = ({ onScrollToSection }: Props) => {
           <img src={headerLogo} />
         </div>
         <ul className={styles.menu}>
+          <li onClick={() => onScrollToSection("speakers")}>Speakers</li>
           <li onClick={() => onScrollToSection("timetable")}>Timetable</li>
-          <li onClick={() => onScrollToSection("project")}>Project</li>
+          <li onClick={() => onScrollToSection("sponsors")}>Sponsors</li>
           <li onClick={() => onScrollToSection("location")}>Location</li>
-          <li onClick={() => onScrollToSection("qna")}>QnA</li>
           <li onClick={() => onScrollToSection("contact")}>Contact</li>
         </ul>
-        <button className={styles.registerButton}>🧑‍💻 해커톤 신청하기</button>
+        <button className={styles.registerButton}>🧑‍💻 컨퍼런스 신청하기</button>
       </nav>
     </header>
   );
@@ -91,7 +93,7 @@ const styles = {
     display: "none",
     width: "12.4rem",
     height: "3rem",
-    backgroundColor: "summer",
+    backgroundColor: "autumn",
     fontWeight: 700,
     fontSize: "1.2rem",
     color: "background.500",
