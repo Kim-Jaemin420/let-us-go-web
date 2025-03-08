@@ -1,12 +1,13 @@
-import Signature4Big from "@/assets/svgs/hackathon/signature4-big.svg";
-import Signature4Small from "@/assets/svgs/hackathon/signature4-small.svg";
+import Signature4Big from "@/assets/svgs/signature4-big.svg";
+import Signature4Small from "@/assets/svgs/signature4-small.svg";
 import { css } from "@styled-system/css";
 import eliceLabImage from "@/assets/images/sponsors/eliceLab.png";
 import appknotImage from "@/assets/images/sponsors/appknot.png";
+import { forwardRef } from "react";
 
-const Sponsors = () => {
+const Sponsors = forwardRef<HTMLDivElement>((_props, ref) => {
   return (
-    <div className={styles.container}>
+    <div ref={ref} className={styles.container}>
       <div className={styles.bigSignature}>
         <Signature4Big />
       </div>
@@ -35,7 +36,7 @@ const Sponsors = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Sponsors;
 
@@ -68,7 +69,9 @@ const styles = {
   }),
   title: css({
     fontSize: "7.2rem",
-    color: "summer",
+    background: "linear-gradient(to bottom, #7F42FF 0%, #4C00EE 100%)",
+    backgroundClip: "text",
+    color: "transparent",
     fontFamily: "Unbounded",
     fontWeight: 700,
     marginBottom: "4.4rem",
@@ -90,7 +93,7 @@ const styles = {
       marginBottom: "6rem",
     },
   }),
-  imageContainer:css({
+  imageContainer: css({
     display: "flex",
     flexFlow: "column wrap",
     gap: "10rem",

@@ -1,11 +1,11 @@
 import { css } from "@styled-system/css";
 import classNames from "classnames";
-import Email56 from "@/assets/svgs/hackathon/email56.svg";
-import Email20 from "@/assets/svgs/hackathon/email20.svg";
-import Instagram56 from "@/assets/svgs/hackathon/instagram56.svg";
-import Instagram20 from "@/assets/svgs/hackathon/instagram20.svg";
-import Linkedin56 from "@/assets/svgs/hackathon/linkedin56.svg";
-import Linkedin20 from "@/assets/svgs/hackathon/linkedin20.svg";
+import Email56 from "@/assets/svgs/email56.svg";
+import Email20 from "@/assets/svgs/email20.svg";
+import Instagram56 from "@/assets/svgs/instagram56.svg";
+import Instagram20 from "@/assets/svgs/instagram20.svg";
+import Linkedin56 from "@/assets/svgs/linkedin56.svg";
+import Linkedin20 from "@/assets/svgs/linkedin20.svg";
 import footerLogo from "@/assets/images/footer-logo.png";
 
 const Footer = () => {

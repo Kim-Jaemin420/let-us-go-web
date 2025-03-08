@@ -1,24 +1,24 @@
 import { css } from "@styled-system/css";
-import Signature3Big from "@/assets/svgs/hackathon/signature3-big.svg";
-import Signature3Small from "@/assets/svgs/hackathon/signature3-small.svg";
-import Email56 from "@/assets/svgs/hackathon/email56.svg";
-import Email16 from "@/assets/svgs/hackathon/email16.svg";
-import Instagram56 from "@/assets/svgs/hackathon/instagram56.svg";
-import Instagram16 from "@/assets/svgs/hackathon/instagram16.svg";
-import Kakaotalk56 from "@/assets/svgs/hackathon/kakaotalk56.svg";
-import Kakaotalk16 from "@/assets/svgs/hackathon/kakaotalk16.svg";
-import ArrowRight32 from "@/assets/svgs/hackathon/arrow-right32.svg";
-import ArrowRight16 from "@/assets/svgs/hackathon/arrow-right16.svg";
+import Signature2Big from "@/assets/svgs/signature2-big.svg";
+import Signature2Small from "@/assets/svgs/signature2-small.svg";
+import Email56 from "@/assets/svgs/email56.svg";
+import Email16 from "@/assets/svgs/email16.svg";
+import Instagram56 from "@/assets/svgs/instagram56.svg";
+import Instagram16 from "@/assets/svgs/instagram16.svg";
+import Kakaotalk56 from "@/assets/svgs/kakaotalk56.svg";
+import Kakaotalk16 from "@/assets/svgs/kakaotalk16.svg";
+import ArrowRight32 from "@/assets/svgs/arrow-right32.svg";
+import ArrowRight16 from "@/assets/svgs/arrow-right16.svg";
 import { forwardRef } from "react";
 
 const Contact = forwardRef<HTMLDivElement>((_props, ref) => {
   return (
     <div ref={ref} className={styles.container}>
       <div className={styles.bigSignature}>
-        <Signature3Big />
+        <Signature2Big />
       </div>
       <div className={styles.smallSignature}>
-        <Signature3Small />
+        <Signature2Small />
       </div>
       <div className={styles.title}>Contact</div>
       <div className={styles.contactContainer}>
@@ -112,7 +112,9 @@ const styles = {
   }),
   title: css({
     fontSize: "7.2rem",
-    color: "summer",
+    background: "linear-gradient(to bottom, #7F42FF 0%, #4C00EE 100%)",
+    backgroundClip: "text",
+    color: "transparent",
     fontFamily: "Unbounded",
     fontWeight: 700,
     marginBottom: "4.4rem",

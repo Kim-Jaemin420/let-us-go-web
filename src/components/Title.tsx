@@ -30,24 +30,26 @@ const Title = () => {
         </svg>
         <span className={styles.hack}>
           <TypeAnimation
-            sequence={["Hack"]}
+            sequence={["Conf"]}
             wrapper="span"
             speed={1}
             style={{
               display: "inline-block",
               fontFamily: "Unbounded",
               fontWeight: "700",
-              color: "#FFF849",
+              background: "linear-gradient(to bottom, #7F42FF 0%, #4C00EE 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
               verticalAlign: "middle",
             }}
             repeat={1}
           />
         </span>
       </div>
-      <div className={styles.description}>a.k.a 2024 찍먹톤에 초대합니다.</div>
-      <div className={styles.date}>2024.6.29(SAT) 10:00 - 21:00</div>
+      <div className={styles.description}>iOS 개발자들의 2024 가을 컨퍼런스에 초대합니다.</div>
+      <div className={styles.date}>2024.9.30(SAT) 13:00 - 18:00</div>
       <a href="https://forms.gle/XYgxktLg4RuHBntX6" target="_blank" className={styles.applyButton}>
-        🧑‍💻해커톤 신청하기
+        ✍️컨퍼런스 등록하기
       </a>
     </div>
   );
@@ -164,8 +166,8 @@ const styles = {
     fontSize: "3.2rem",
     padding: "2.7rem 6rem",
     borderRadius: "5rem",
-    backgroundColor: "summer",
-    color: "background.500",
+    backgroundColor: "autumnSolid",
+    color: "background.100",
 
     "@media (max-width: 768px)": {
       fontSize: "1.6rem",

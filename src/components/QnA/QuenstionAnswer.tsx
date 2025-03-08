@@ -1,9 +1,9 @@
 import { ReactNode, useEffect, useRef, useState } from "react";
 import { css } from "@styled-system/css";
-import ArrowDown32 from "@/assets/svgs/hackathon/arrow-down32.svg";
-import ArrowDown16 from "@/assets/svgs/hackathon/arrow-down16.svg";
-import ArrowUp32 from "@/assets/svgs/hackathon/arrow-up32.svg";
-import ArrowUp16 from "@/assets/svgs/hackathon/arrow-up16.svg";
+import ArrowDown32 from "@/assets/svgs/arrow-down32.svg";
+import ArrowDown16 from "@/assets/svgs/arrow-down16.svg";
+import ArrowUp32 from "@/assets/svgs/arrow-up32.svg";
+import ArrowUp16 from "@/assets/svgs/arrow-up16.svg";
 
 interface Props {
   question: ReactNode;

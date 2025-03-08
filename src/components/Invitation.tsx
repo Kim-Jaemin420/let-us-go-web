@@ -1,6 +1,6 @@
 import classNames from "classnames";
-import Signature1Big from "@/assets/svgs/hackathon/signature1-big.svg";
-import Signature1Small from "@/assets/svgs/hackathon/signature1-small.svg";
+import Signature1Big from "@/assets/svgs/signature1-big.svg";
+import Signature1Small from "@/assets/svgs/signature1-small.svg";
 import groupPhotoImage from "@/assets/images/group-photo.jpg";
 import { css } from "@styled-system/css";
 
@@ -66,7 +66,9 @@ const styles = {
   }),
   title: css({
     fontSize: "7.2rem",
-    color: "summer",
+    background: "linear-gradient(to bottom, #7F42FF 0%, #4C00EE 100%)",
+    backgroundClip: "text",
+    color: "transparent",
     fontFamily: "Unbounded",
     fontWeight: 700,
 

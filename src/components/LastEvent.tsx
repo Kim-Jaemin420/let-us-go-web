@@ -8,7 +8,7 @@ const LastEvent = () => {
 
   return (
     <Slider className={styles.slider}>
-      <a href="https://letusgo2024-spring.vercel.app/">
+      <a href="https://letusgo2024-summer.vercel.app/">
         <div className={styles.message}>{repeatedMessage}</div>
       </a>
     </Slider>
@@ -23,11 +23,9 @@ const styles = {
     alignItems: "center",
     height: "11.3rem",
     overflow: "hidden",
-    color: "#000",
-    backgroundColor: "summer",
+    backgroundColor: "autumnSolid",
     fontFamily: "Unbounded",
 
-    borderY: "0.1rem solid",
     whiteSpace: "pre",
     marginX: "1rem",
     _last: {
@@ -42,7 +40,7 @@ const styles = {
   message: css({
     display: "inline-block",
     fontSize: "5.4rem",
-    fontWeight: 700,
+    fontWeight: 800,
 
     "@media (max-width: 768px)": {
       fontSize: "1.6rem",

@@ -1,14 +1,14 @@
 import { css } from "@styled-system/css";
 import Card from "./Card";
-import visionDeskImage from "@/assets/images/hackathon/2024/visionDesk.png";
-import toimerImage from "@/assets/images/hackathon/2024/toimer.png";
-import emotionalystImage from "@/assets/images/hackathon/2024/emotionalyst.png";
-import ttogiokImage from "@/assets/images/hackathon/2024/ttogiok.png";
-import oneLineDiaryImage from "@/assets/images/hackathon/2024/oneLineDiary.png";
-import saveUsImage from "@/assets/images/hackathon/2024/saveUs.png";
-import roadKillImage from "@/assets/images/hackathon/2024/roadKill.png";
-import tripLoggerImage from "@/assets/images/hackathon/2024/tripLogger.png";
-import meokcipyImage from "@/assets/images/hackathon/2024/meokcipy.png";
+import visionDeskImage from "@/assets/images/2024/visionDesk.png";
+import toimerImage from "@/assets/images/2024/toimer.png";
+import emotionalystImage from "@/assets/images/2024/emotionalyst.png";
+import ttogiokImage from "@/assets/images/2024/ttogiok.png";
+import oneLineDiaryImage from "@/assets/images/2024/oneLineDiary.png";
+import saveUsImage from "@/assets/images/2024/saveUs.png";
+import roadKillImage from "@/assets/images/2024/roadKill.png";
+import tripLoggerImage from "@/assets/images/2024/tripLogger.png";
+import meokcipyImage from "@/assets/images/2024/meokcipy.png";
 
 const Projects2024 = () => {
   return (
@@ -124,7 +124,7 @@ const styles = {
   }),
   title: css({
     fontSize: "7.2rem",
-    color: "summer",
+    color: "autumn",
     fontFamily: "Unbounded",
     fontWeight: 700,
     marginBottom: "4.4rem",

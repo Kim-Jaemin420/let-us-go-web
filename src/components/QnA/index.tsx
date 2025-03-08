@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import { css } from "@styled-system/css";
-import Signature2Big from "@/assets/svgs/hackathon/signature2-big.svg";
-import Signature2Small from "@/assets/svgs/hackathon/signature2-small.svg";
+import Signature2Big from "@/assets/svgs/signature2-big.svg";
+import Signature2Small from "@/assets/svgs/signature2-small.svg";
 import QuestionAnswer from "./QuenstionAnswer";
 
 const QnA = forwardRef<HTMLDivElement>((_props, ref) => {
@@ -88,7 +88,7 @@ const styles = {
   }),
   title: css({
     fontSize: "7.2rem",
-    color: "summer",
+    color: "autumn",
     fontFamily: "Unbounded",
     fontWeight: 700,
     marginBottom: "4.4rem",

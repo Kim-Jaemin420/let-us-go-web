@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
-import Signature3Big from "@/assets/svgs/hackathon/signature3-big.svg";
-import Signature3Small from "@/assets/svgs/hackathon/signature3-small.svg";
+import Signature3Big from "@/assets/svgs/signature3-big.svg";
+import Signature3Small from "@/assets/svgs/signature3-small.svg";
 import { css } from "@styled-system/css";
 import Projects2024 from "./Projects2024";
 import Projects2023 from "./Projects2023";
@@ -54,7 +54,7 @@ const styles = {
   }),
   title: css({
     fontSize: "7.2rem",
-    color: "summer",
+    color: "autumn",
     fontFamily: "Unbounded",
     fontWeight: 700,
     marginBottom: "4.4rem",

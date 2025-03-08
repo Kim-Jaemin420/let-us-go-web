@@ -21,10 +21,10 @@ const styles = {
 
     borderRadius: "1.2rem",
     borderWidth: "0.2rem",
-    borderColor: "summer",
+    borderColor: "autumn",
     fontSize: "2.8rem",
     fontWeight: 600,
-    color: "summer",
+    color: "autumn",
     textAlign: "center",
     marginBottom: "2rem",
 
