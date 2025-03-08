@@ -36,7 +36,7 @@ const styles = {
     fontFamily: "Unbounded",
     marginBottom: "28rem",
     borderY: "0.1rem solid",
-    borderColor: "autumnSolid",
+    borderColor: "springSolid",
     whiteSpace: "pre",
     marginX: "1rem",
     _last: {
@@ -57,8 +57,6 @@ const styles = {
     },
   }),
   gradientText: css({
-    background: "linear-gradient(to bottom, #7F42FF 0%, #4C00EE 100%)",
-    backgroundClip: "text",
-    color: "transparent",
+    color: "springSolid",
   }),
 };

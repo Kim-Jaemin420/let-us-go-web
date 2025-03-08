@@ -96,7 +96,7 @@ const styles = {
   }),
   title: css({
     fontSize: "7.2rem",
-    background: "linear-gradient(to bottom, #7F42FF 0%, #4C00EE 100%)",
+    background: "linear-gradient(to bottom, #00D0F3 0%, #0066FF 100%)",
     backgroundClip: "text",
     color: "transparent",
     fontFamily: "Unbounded",

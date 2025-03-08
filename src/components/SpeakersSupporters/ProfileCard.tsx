@@ -46,7 +46,7 @@ const styles = {
   }),
   role: (role: "speaker" | "supporter") =>
     css({
-      color: role === "speaker" ? "autumnSolid" : "autumn",
+      color: role === "speaker" ? "spring" : "springSolid",
       textTransform: "uppercase",
       fontWeight: "bold",
       fontSize: "2rem",
