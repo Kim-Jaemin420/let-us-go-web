@@ -1,8 +1,8 @@
 import { TypeAnimation } from "react-type-animation";
 import classNames from "classnames";
 import { css } from "@styled-system/css";
-import Logo1 from "@/assets/svgs/logo1.svg";
-import Logo1Small from "@/assets/svgs/logo1-small.svg";
+import Logo1 from "@/assets/svgs/logo1.svg?react";
+import Logo1Small from "@/assets/svgs/logo1-small.svg?react";
 
 const Title = () => {
   return (
@@ -30,24 +30,24 @@ const Title = () => {
         </svg>
         <span className={styles.hack}>
           <TypeAnimation
-            sequence={["Conf"]}
+            sequence={["Conf", 1000, "", 1000]}
             wrapper="span"
-            speed={1}
+            speed={30}
             style={{
               display: "inline-block",
               fontFamily: "Unbounded",
               fontWeight: "700",
-              background: "linear-gradient(to bottom, #7F42FF 0%, #4C00EE 100%)",
+              background: "linear-gradient(to bottom, #00D0F3 0%, #0066FF 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               verticalAlign: "middle",
             }}
-            repeat={1}
+            repeat={Infinity}
           />
         </span>
       </div>
-      <div className={styles.description}>iOS 개발자들의 2024 가을 컨퍼런스에 초대합니다.</div>
-      <div className={styles.date}>2024.9.30(SAT) 13:00 - 18:00</div>
+      <div className={styles.description}>iOS 개발자들의 2025 봄 컨퍼런스에 초대합니다.</div>
+      <div className={styles.date}>2025.3.29(SAT) 13:00 - 18:00</div>
       <a href="https://forms.gle/XYgxktLg4RuHBntX6" target="_blank" className={styles.applyButton}>
         ✍️컨퍼런스 등록하기
       </a>
@@ -166,7 +166,7 @@ const styles = {
     fontSize: "3.2rem",
     padding: "2.7rem 6rem",
     borderRadius: "5rem",
-    backgroundColor: "autumnSolid",
+    backgroundColor: "springSolid",
     color: "background.100",
 
     "@media (max-width: 768px)": {

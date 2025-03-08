@@ -22,8 +22,8 @@ export default defineConfig({
             400: { value: "#242931" },
             500: { value: "#13161C" },
           },
-          autumn: { value: "#4C00EE" },
-          autumnSolid: { value: "#7F42FF" },
+          spring: { value: "#00D0F3" },
+          springSolid: { value: "#0066FF" },
         },
       },
       keyframes: {

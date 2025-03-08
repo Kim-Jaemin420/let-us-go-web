@@ -43,10 +43,15 @@ const styles = {
     height: "20rem",
     borderRadius: "50rem",
     overflow: "hidden",
+
+    "@media (max-width: 768px)": {
+      width: "15rem",
+      height: "15rem",
+    },
   }),
   role: (role: "speaker" | "supporter") =>
     css({
-      color: role === "speaker" ? "autumnSolid" : "autumn",
+      color: role === "speaker" ? "spring" : "springSolid",
       textTransform: "uppercase",
       fontWeight: "bold",
       fontSize: "2rem",

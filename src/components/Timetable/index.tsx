@@ -1,5 +1,5 @@
-import Signature3Big from "@/assets/svgs/signature3-big.svg";
-import Signature3Small from "@/assets/svgs/signature3-small.svg";
+import Signature3Big from "@/assets/svgs/signature3-big.svg?react";
+import Signature3Small from "@/assets/svgs/signature3-small.svg?react";
 import { css } from "@styled-system/css";
 import { forwardRef } from "react";
 
@@ -89,7 +89,7 @@ const styles = {
   }),
   title: css({
     fontSize: "7.2rem",
-    background: "linear-gradient(to bottom, #7F42FF 0%, #4C00EE 100%)",
+    background: "linear-gradient(to bottom, #00D0F3 0%, #0066FF 100%)",
     backgroundClip: "text",
     color: "transparent",
     fontFamily: "Unbounded",

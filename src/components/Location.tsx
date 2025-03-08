@@ -2,8 +2,8 @@ import { forwardRef } from "react";
 import { Map, MapMarker } from "react-kakao-maps-sdk";
 import { css } from "@styled-system/css";
 import useKakaoMapLoader from "@/hooks/useKakaoLoader";
-import Signature1Big from "@/assets/svgs/signature1-big.svg";
-import Signature1Small from "@/assets/svgs/signature1-small.svg";
+import Signature1Big from "@/assets/svgs/signature1-big.svg?react";
+import Signature1Small from "@/assets/svgs/signature1-small.svg?react";
 
 const LOCATION = {
   lat: 37.54619,
@@ -78,7 +78,7 @@ const styles = {
   }),
   title: css({
     fontSize: "7.2rem",
-    background: "linear-gradient(to bottom, #7F42FF 0%, #4C00EE 100%)",
+    background: "linear-gradient(to bottom, #00D0F3 0%, #0066FF 100%)",
     backgroundClip: "text",
     color: "transparent",
     fontFamily: "Unbounded",

@@ -1,8 +1,8 @@
 import { forwardRef } from "react";
 import { css } from "@styled-system/css";
 import ProfileCard from "./ProfileCard";
-import Signature2Big from "@/assets/svgs/signature2-big.svg";
-import Signature2Small from "@/assets/svgs/signature2-small.svg";
+import Signature2Big from "@/assets/svgs/signature2-big.svg?react";
+import Signature2Small from "@/assets/svgs/signature2-small.svg?react";
 import ethanImage from "@/assets/images/SpeakersSupporters/ethan.jpeg";
 import eunpyoImage from "@/assets/images/SpeakersSupporters/eunpyo.jpeg";
 import jercyImage from "@/assets/images/SpeakersSupporters/jercy.png";
@@ -96,7 +96,7 @@ const styles = {
   }),
   title: css({
     fontSize: "7.2rem",
-    background: "linear-gradient(to bottom, #7F42FF 0%, #4C00EE 100%)",
+    background: "linear-gradient(to bottom, #00D0F3 0%, #0066FF 100%)",
     backgroundClip: "text",
     color: "transparent",
     fontFamily: "Unbounded",
@@ -121,7 +121,7 @@ const styles = {
     "@media (max-width: 768px)": {
       gridGap: "2rem",
       width: "100%",
-      gridTemplateColumns: "repeat(1, 1fr)",
+      gridTemplateColumns: "repeat(2, 1fr)",
     },
   }),
 };

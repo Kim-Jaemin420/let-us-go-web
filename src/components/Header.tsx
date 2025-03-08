@@ -93,7 +93,7 @@ const styles = {
     display: "none",
     width: "12.4rem",
     height: "3rem",
-    backgroundColor: "autumn",
+    backgroundColor: "springSolid",
     fontWeight: 700,
     fontSize: "1.2rem",
     color: "background.500",
