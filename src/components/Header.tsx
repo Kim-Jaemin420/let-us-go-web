@@ -2,9 +2,7 @@ import { css } from "@styled-system/css";
 import headerLogo from "@/assets/images/header-logo.png";
 
 interface Props {
-  onScrollToSection: (
-    section: "timetable" | "speakers" | "location" | "sponsors" | "contact",
-  ) => void;
+  onScrollToSection: (section: "about") => void;
 }
 
 const Header = ({ onScrollToSection }: Props) => {
@@ -15,13 +13,10 @@ const Header = ({ onScrollToSection }: Props) => {
           <img src={headerLogo} />
         </div>
         <ul className={styles.menu}>
-          <li onClick={() => onScrollToSection("speakers")}>Speakers</li>
-          <li onClick={() => onScrollToSection("timetable")}>Timetable</li>
-          <li onClick={() => onScrollToSection("sponsors")}>Sponsors</li>
-          <li onClick={() => onScrollToSection("location")}>Location</li>
-          <li onClick={() => onScrollToSection("contact")}>Contact</li>
+          <li onClick={() => onScrollToSection("about")}>About</li>
+          <li onClick={() => {}}>Archive</li>
         </ul>
-        <button className={styles.registerButton}>🧑‍💻 컨퍼런스 신청하기</button>
+        <button className={styles.registerButton}>📂 지난 행사 보기</button>
       </nav>
     </header>
   );
@@ -93,7 +88,7 @@ const styles = {
     display: "none",
     width: "12.4rem",
     height: "3rem",
-    backgroundColor: "springSolid",
+    backgroundColor: "main",
     fontWeight: 700,
     fontSize: "1.2rem",
     color: "background.500",

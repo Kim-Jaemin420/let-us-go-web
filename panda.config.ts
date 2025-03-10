@@ -15,6 +15,16 @@ export default defineConfig({
     extend: {
       tokens: {
         colors: {
+          neutral: {
+            100: { value: "#F7FAFC" },
+            200: { value: "#EDF1F6" },
+            300: { value: "#CCD5E0" },
+            400: { value: "#A1ADC0" },
+            500: { value: "#727F96" },
+            600: { value: "#1B202C" },
+            700: { value: "#212A39" },
+          },
+          white: { value: "#fff" },
           background: {
             100: { value: "#ffffff" },
             200: { value: "#ABB5C3" },
@@ -22,8 +32,11 @@ export default defineConfig({
             400: { value: "#242931" },
             500: { value: "#13161C" },
           },
-          spring: { value: "#00D0F3" },
-          springSolid: { value: "#0066FF" },
+          main: { value: "#00D0F3" },
+          spring: { value: "#0066FF" },
+          summer: { value: "#FFF849" },
+          autumn: { value: "#7F42FF" },
+          winter: { value: "#00D0F3" },
         },
       },
       keyframes: {

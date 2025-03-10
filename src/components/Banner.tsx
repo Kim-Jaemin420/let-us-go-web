@@ -36,7 +36,7 @@ const styles = {
     fontFamily: "Unbounded",
     marginBottom: "28rem",
     borderY: "0.1rem solid",
-    borderColor: "springSolid",
+    borderColor: "main",
     whiteSpace: "pre",
     marginX: "1rem",
     _last: {
@@ -57,6 +57,6 @@ const styles = {
     },
   }),
   gradientText: css({
-    color: "springSolid",
+    color: "main",
   }),
 };

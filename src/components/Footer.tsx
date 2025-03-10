@@ -1,11 +1,7 @@
 import { css } from "@styled-system/css";
-import classNames from "classnames";
-import Email56 from "@/assets/svgs/email56.svg";
-import Email20 from "@/assets/svgs/email20.svg";
-import Instagram56 from "@/assets/svgs/instagram56.svg";
-import Instagram20 from "@/assets/svgs/instagram20.svg";
-import Linkedin56 from "@/assets/svgs/linkedin56.svg";
-import Linkedin20 from "@/assets/svgs/linkedin20.svg";
+import EmailSvg from "@/assets/svgs/email-footer.svg?react";
+import InstagramSvg from "@/assets/svgs/instagram.svg?react";
+import LinkedinSvg from "@/assets/svgs/linkedin.svg?react";
 import footerLogo from "@/assets/images/footer-logo.png";
 
 const Footer = () => {
@@ -21,26 +17,14 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.iconContainer}>
-          <a href="mailTo:iOSDevKor@gmail.com" className={styles.bigIcon}>
-            <Email56 />
+          <a href="mailTo:iOSDevKor@gmail.com">
+            <EmailSvg className={styles.icon} />
           </a>
-          <a href="mailTo:iOSDevKor@gmail.com" className={styles.smallIcon}>
-            <Email20 />
+          <a href="https://www.instagram.com/letusgo_kor?igsh=eDBnazE5cXEzcnN0">
+            <InstagramSvg className={styles.icon} />
           </a>
-          <a
-            href="https://www.instagram.com/letusgo_kor?igsh=eDBnazE5cXEzcnN0"
-            className={classNames(styles.bigIcon, styles.instagram)}
-          >
-            <Instagram56 />
-          </a>
-          <div className={classNames(styles.smallIcon, styles.instagram)}>
-            <Instagram20 />
-          </div>
-          <a href="https://www.linkedin.com/company/letusgo-kr/" className={styles.bigIcon}>
-            <Linkedin56 />
-          </a>
-          <a href="https://www.linkedin.com/company/letusgo-kr/" className={styles.smallIcon}>
-            <Linkedin20 />
+          <a href="https://www.linkedin.com/company/letusgo-kr/">
+            <LinkedinSvg className={styles.icon} />
           </a>
         </div>
       </div>
@@ -85,23 +69,15 @@ const styles = {
       marginTop: "3.2rem",
     },
   }),
-  bigIcon: css({
-    display: "block",
-    "@media (max-width: 768px)": {
-      display: "none",
-    },
-  }),
-  smallIcon: css({
-    display: "none",
-    "@media (max-width: 768px)": {
-      display: "block",
-    },
-  }),
-  instagram: css({
-    marginX: "3.2rem",
+  icon: css({
+    width: "56px",
+    height: "56px",
+    marginRight: "3.2rem",
 
     "@media (max-width: 768px)": {
-      marginX: "1.2rem",
+      width: "20px",
+      height: "20px",
+      marginRight: "1.2rem",
     },
   }),
   footerTitle: css({

@@ -23,7 +23,7 @@ const styles = {
     alignItems: "center",
     height: "11.3rem",
     overflow: "hidden",
-    backgroundColor: "springSolid",
+    backgroundColor: "main",
     fontFamily: "Unbounded",
 
     whiteSpace: "pre",

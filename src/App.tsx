@@ -3,35 +3,26 @@ import { useRef } from "react";
 import Header from "./components/Header";
 import Title from "./components/Title";
 import Banner from "./components/Banner";
-import Invitation from "./components/Invitation";
-import SpeakersSupporters from "./components/SpeakersSupporters";
-import Timetable from "./components/Timetable";
 import Sponsors from "./components/Sponsors";
-import Location from "./components/Location";
-import Contact from "./components/Contact";
 import LastEvent from "./components/LastEvent";
 import Footer from "./components/Footer";
+import About from "./components/About";
+import Schedule from "./components/Schedule";
+import Crew from "./components/Crew";
+import JoinUs from "./components/JoinUs";
 
 const App = () => {
-  const timetableRef = useRef<HTMLDivElement>(null);
-  const speakersRef = useRef<HTMLDivElement>(null);
-  const locationRef = useRef<HTMLDivElement>(null);
-  const sponsorsRef = useRef<HTMLDivElement>(null);
-  const contactRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
 
-  const scrollToSection = (
-    section: "timetable" | "speakers" | "location" | "sponsors" | "contact",
-  ) => {
-    const sectionRef = {
-      timetable: timetableRef,
-      speakers: speakersRef,
-      location: locationRef,
-      sponsors: sponsorsRef,
-      contact: contactRef,
-    }[section];
+  const scrollToSection = (section: "about") => {
+    const sectionRef = { about: aboutRef }[section];
 
     if (sectionRef?.current) {
-      sectionRef.current.scrollIntoView({ behavior: "smooth" });
+      const yOffset = -80;
+      const element = sectionRef.current;
+      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
 
@@ -39,15 +30,14 @@ const App = () => {
     <div className={styles.container}>
       <div className={styles.centered}>
         <Header onScrollToSection={scrollToSection} />
-        <Title />
+        <Title onScrollToSection={scrollToSection} />
         <Banner />
         <div className={styles.contentContainer}>
-          <Invitation />
-          <SpeakersSupporters ref={speakersRef} />
-          <Timetable ref={timetableRef} />
-          <Sponsors ref={sponsorsRef} />
-          <Location ref={locationRef} />
-          <Contact ref={contactRef} />
+          <About ref={aboutRef} />
+          <Schedule />
+          <Crew />
+          <Sponsors />
+          <JoinUs />
         </div>
         <LastEvent />
         <Footer />
